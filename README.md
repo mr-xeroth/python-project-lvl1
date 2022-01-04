@@ -3,4 +3,8 @@
 [![Actions Status](https://github.com/mr-xeroth/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/mr-xeroth/python-project-lvl1/actions)
 
 https://asciinema.org/a/DxsTcRn9Jbz7u63An6D7HgTck
+
 https://asciinema.org/a/CF1tmRpc7FKkOsdgedgJFgall
+
+https://asciinema.org/a/WrkuTjUTdWEa2hBramddkqfU2
+
