@@ -14,14 +14,21 @@ def task_init():
     return divisor_list
 
 
+# checks for correct numbers values
+def is_valid(num_0, num_1):
+    if num_0 == num_1 or (num_0 + num_1) % 2 == 0:
+        return False
+    # check with 50 and 100, etc
+    if num_0 < num_1:
+        if num_1 % num_0 == 0:
+            return False
+    else:
+        if num_0 % num_1 == 0:
+            return False
+    return True
+
+
 def task_gdc(op_list, step):
-    # checks for num0 % num1 == 0 and vice versa
-    def is_valid(num_0, num_1):
-        if num_0 == num_1:
-            return False
-        if (num_0 + num_1) % 2 == 0:
-            return False
-        return True
     divisor = op_list[step]
     num_limit = 100 // divisor
     num_0 = num_1 = 0
