@@ -1,25 +1,26 @@
-## Проект 1: Игры разума
-=
+## Проект #1: Игры разума
+
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+
 [![Actions Status](https://github.com/mr-xeroth/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/mr-xeroth/python-project-lvl1/actions)
 
 Учебный проект демонстрирующий простейший ввод-вывод CLI для пользователя. Программы проекта собираются в готовый для установки пакет. 
--
 
-**Требует
+**Установка**
 
-- Python 3.6+
-- Poetry 1.0+
+Требует [Python](https://www.python.org/) v3.6+, [Poetry](https://python-poetry.org/) 1.0+.
 
-**Установка
+```sh
+  cd <source folder>
+  make build
+  make package-install
+```
 
-    make build
-    make package-install
-
-**Удаление
-    pip3 uninstall hexlet-code
-
-### Примеры работы
+**Удаление**
+```sh
+  pip3 uninstall hexlet-code
+```
+**Примеры работы**
 
 - [brain-even][1]
 - [brain-calc][2]
