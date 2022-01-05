@@ -15,7 +15,7 @@ def task_init():
     for i in range(GAME_STEPS_COUNT):
         skip_list.append(randint(0, len_list[i] - 1))
     task_list = []
-    for i in range(3):
+    for i in range(GAME_STEPS_COUNT):
         task_list.append([len_list[i], start_list[i], step_list[i],
                           skip_list[i]])
     return task_list
