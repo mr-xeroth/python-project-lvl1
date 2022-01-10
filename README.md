@@ -15,6 +15,7 @@ cd <source folder>
 make build
 make package-install
 ```
+
 **Запуск**
 
 ```sh
@@ -38,6 +39,7 @@ brain-prime
 ```sh
 pip3 uninstall hexlet-code
 ```
+
 **Примеры работы**
 
 <a href="https://asciinema.org/a/Ven1BaTSJ9gHdk9smTrEiVixZ" target="_blank"><img src="https://asciinema.org/a/Ven1BaTSJ9gHdk9smTrEiVixZ.svg" /></a>

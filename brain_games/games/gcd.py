@@ -13,14 +13,11 @@ def init_game(step_count):
 
 # checks for correct numbers values
 def is_num_valid(num_0, num_1):
-    if num_0 == num_1 or (num_0 + num_1) % 2 == 0:
+    if num_0 == num_1:
         return False
-    # check with 50 and 100, etc
-    if num_0 < num_1:
-        if num_1 % num_0 == 0:
-            return False
-    else:
-        if num_0 % num_1 == 0:
+    prime = [2, 3, 5, 7]
+    for i in prime:
+        if not bool(num_0 % i + num_1 % i):
             return False
     return True
 
