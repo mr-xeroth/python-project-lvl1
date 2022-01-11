@@ -42,12 +42,12 @@ pip3 uninstall hexlet-code
 
 **Примеры работы**
 
-<a href="https://asciinema.org/a/Ven1BaTSJ9gHdk9smTrEiVixZ" target="_blank"><img src="https://asciinema.org/a/Ven1BaTSJ9gHdk9smTrEiVixZ.svg" /></a>
+<a href="https://asciinema.org/a/461063" target="_blank"><img src="https://asciinema.org/a/461063.svg" /></a>
 
-<a href="https://asciinema.org/a/7KDfI2vOlGd45d6niOL0Ob2IR" target="_blank"><img src="https://asciinema.org/a/7KDfI2vOlGd45d6niOL0Ob2IR.svg" /></a>
+<a href="https://asciinema.org/a/461065" target="_blank"><img src="https://asciinema.org/a/461065.svg" /></a>
 
-<a href="https://asciinema.org/a/WrkuTjUTdWEa2hBramddkqfU2" target="_blank"><img src="https://asciinema.org/a/WrkuTjUTdWEa2hBramddkqfU2.svg" /></a>
+<a href="https://asciinema.org/a/461066" target="_blank"><img src="https://asciinema.org/a/461066.svg" /></a>
 
-<a href="https://asciinema.org/a/CF1tmRpc7FKkOsdgedgJFgall" target="_blank"><img src="https://asciinema.org/a/CF1tmRpc7FKkOsdgedgJFgall.svg" /></a>
+<a href="https://asciinema.org/a/461067" target="_blank"><img src="https://asciinema.org/a/461067.svg" /></a>
 
-<a href="https://asciinema.org/a/DxsTcRn9Jbz7u63An6D7HgTck" target="_blank"><img src="https://asciinema.org/a/DxsTcRn9Jbz7u63An6D7HgTck.svg" /></a>
+<a href="https://asciinema.org/a/461068" target="_blank"><img src="https://asciinema.org/a/461068.svg" /></a>
