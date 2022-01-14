@@ -8,7 +8,7 @@
 
 **Установка**
 
-Требует [Python](https://www.python.org/) v3.6+, [Poetry](https://python-poetry.org/) v1.0+.
+Требует [Python](https://www.python.org/) v3.8+, [Poetry](https://python-poetry.org/) v1.0+.
 
 ```sh
 cd <source folder>
