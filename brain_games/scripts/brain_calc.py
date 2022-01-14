@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
-import brain_games.config
-from brain_games.games.calc import init_game, exec_game_step
+from brain_games.games.calc import exec_game_step
 from brain_games.core import run_game_package
 
-GAME_PROMPT = 'What is the result of the expression?'
+GAME_STEPS_COUNT = 3
 
 
 def main():
-    brain_games.config.init_game_config(GAME_PROMPT, init_game, exec_game_step)
-    run_game_package()
+    run_game_package(exec_game_step, GAME_STEPS_COUNT)
 
 
 if __name__ == '__main__':

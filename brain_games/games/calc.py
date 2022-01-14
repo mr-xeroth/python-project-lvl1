@@ -1,43 +1,31 @@
 #!/usr/b:win/env python3
+from random import randint, sample
 
-from brain_games.core import make_randint_array
-from random import randint
-
-MATH_OPCODES = ['nop', 'sum', 'sub', 'mul']
-opcodes = []
-
-
-# makes random int list [x, y, z] for op codes
-def init_game(step_count):
-    global opcodes
-    opcodes = make_randint_array(step_count, 1, 3)
-
-
-def compose_expression(num_0, num_1, op_text):
-    op_char = '+' if op_text == 'sum' else '-' if op_text == 'sub' else '*'
-    expression = f"{num_0} {op_char} {num_1}"
-    return expression
+OP_CHARS = ['+', '-', '*']
+op_char_cache = []
 
 
 # returns list ['question', 'solution']
-def exec_game_step(step):
-    def make_text_expression():
-        nonlocal question_line
-        nonlocal solution_line
-        nonlocal num_0, num_1
-        nonlocal operator
+def exec_game_step():
+    global op_char_cache
 
-        question_line = compose_expression(num_0, num_1, operator)
-        solution_line = str(eval(question_line))
+    if not op_char_cache:
+        op_char_cache = sample(OP_CHARS, len(OP_CHARS))
 
-    question_line = 'NoS'
-    solution_line = 'NoS'
-    operator = MATH_OPCODES[opcodes[step]]
-    if operator == 'sum' or operator == 'sub':
+    operator = op_char_cache[-1]
+    op_char_cache.pop()
+
+    if operator == '+' or operator == '-':
         num_0 = randint(3, 99)
         num_1 = randint(3, 99)
-    elif operator == 'mul':
+    elif operator == '*':
         num_0 = randint(11, 99)
         num_1 = randint(3, 9)
-    make_text_expression()
+
+    question_line = f"{num_0} {operator} {num_1}"
+    solution_line = str(eval(question_line))
+
     return [question_line, solution_line]
+
+
+exec_game_step.game_prompt = 'What is the result of the expression?'

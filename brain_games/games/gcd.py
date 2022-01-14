@@ -1,34 +1,35 @@
 #!/usr/bin/env python3
 
-from brain_games.core import make_randint_array
-from random import randint
+from random import randrange
 
-divisors = []
-
-
-def init_game(step_count):
-    global divisors
-    divisors = make_randint_array(step_count, 3, 25)
+INT_LIMIT = 100
 
 
-# checks for correct numbers values
-def is_num_valid(num_0, num_1):
-    if num_0 == num_1:
-        return False
-    prime = [2, 3, 5, 7]
-    for i in prime:
-        if not bool(num_0 % i + num_1 % i):
-            return False
-    return True
+# euclidean algorithm
+def calc_gdc(num_0, num_1):
+    if num_1 > num_0:
+        num_0, num_1 = num_1, num_0
+
+    while (reminder := num_0 % num_1) > 1:
+        num_1, num_0 = num_0 % num_1, num_1
+
+    return reminder if reminder else num_1
 
 
-def exec_game_step(step):
-    divisor = divisors[step]
-    num_limit = 100 // divisor
-    num_0 = num_1 = 0
-    while not is_num_valid(num_0, num_1):
-        num_0 = randint(1, num_limit)
-        num_1 = randint(1, num_limit)
-    question_line = f"{num_0 * divisor} {num_1 * divisor}"
-    solution_line = str(divisor)
+# returns list ['question', 'solution']
+def exec_game_step():
+    num_0 = num_1 = 1
+    num_gdc = 1
+
+    while num_0 == num_1 or num_gdc == 1:
+        num_0 = randrange(2, INT_LIMIT)
+        num_1 = randrange(2, INT_LIMIT)
+        num_gdc = calc_gdc(num_0, num_1)
+
+    question_line = f"{num_0} {num_1}"
+    solution_line = str(num_gdc)
     return [question_line, solution_line]
+
+
+exec_game_step.game_prompt = 'Find the greatest '\
+                             'common divisor of given numbers.'
