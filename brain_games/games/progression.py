@@ -32,7 +32,7 @@ def get_game_strings():
         randrange(SEQ_LEN_BASE, SEQ_LEN_TOP),
         randrange(SEQ_TERM_BASE, SEQ_TERM_TOP),
         randrange(SEQ_DIFF_BASE, SEQ_DIFF_TOP))
-    
+
     num = cut_term(sequence, randrange(len(sequence)))
 
     solution_line = str(num)
