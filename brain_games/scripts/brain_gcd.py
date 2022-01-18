@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.games.gcd import exec_game_step
+import brain_games.games.gcd as game
 from brain_games.core import run_game_package
-
-GAME_STEPS_COUNT = 3
 
 
 def main():
-    run_game_package(exec_game_step, GAME_STEPS_COUNT)
+    run_game_package(game)
 
 
 if __name__ == '__main__':

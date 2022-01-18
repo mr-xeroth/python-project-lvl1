@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-
 from random import randrange
 
-PRIME_LIMIT = 100
+GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+INT_TOP = 100
 
 
 def is_prime(num):
@@ -18,14 +19,10 @@ def is_prime(num):
     return True
 
 
-# returns list ['question', 'solution']
-def exec_game_step():
-    number = randrange(PRIME_LIMIT)
+# returns two strings of sorts ('question', 'solution')
+def get_game_strings():
+    number = randrange(INT_TOP)
 
     solution_line = 'yes' if is_prime(number) else 'no'
     question_line = str(number)
-    return [question_line, solution_line]
-
-
-exec_game_step.game_prompt = 'Answer "yes" if given number is prime. '\
-                             'Otherwise answer "no".'
+    return question_line, solution_line
